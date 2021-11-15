@@ -2,10 +2,23 @@
   "name": "cash_force_api_test",
   "version": "1.0.0",
   "description": "Api that connects to the cahs_force databse and create methods ",
-  "main": "index.js",
+  "main": "./src/api/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/tests/**/*$NAME*.test.js --exit",
+    "start": "node .",
+    "reset": "cd ./src && cd ./database && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "dev": "nodemon ."
   },
   "author": "Ruan Miguel",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.2",
+    "nodemon": "^2.0.14",
+    "sequelize": "^6.7.0",
+    "sequelize-cli": "^6.2.0"
+  }
 }
