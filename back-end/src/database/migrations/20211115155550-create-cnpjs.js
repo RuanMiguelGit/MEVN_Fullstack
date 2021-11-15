@@ -8,8 +8,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nomeDoAtributo: {
-        type: Sequelize.STRING
+      cnpj: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
+      },
+      companyType: {
+        type: Sequelize.STRING,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
