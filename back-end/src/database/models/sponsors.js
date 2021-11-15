@@ -34,4 +34,4 @@ const sponsors = (sequelize, DataTypes) => {
   return sponsors;
 };
 
-module.exports = sponsors;s
+module.exports = sponsors;

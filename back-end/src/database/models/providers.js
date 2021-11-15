@@ -1,5 +1,5 @@
 const sponsors = (sequelize, DataTypes) => {
-  const sponsors = sequelize.define("sponsors", {
+  const sponsors = sequelize.define("providers", {
     name: DataTypes.STRING,
     tradingName: DataTypes.STRING,
     cashforceTax: DataTypes.STRING,
