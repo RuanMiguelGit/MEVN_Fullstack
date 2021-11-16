@@ -26,6 +26,7 @@ const buyers = (sequelize, DataTypes) => {
   buyers.associate = (models) => {
     buyers.hasMany(models.orders, { as: "orders", foreignKey: "buyerId" });
     buyers.belongsTo(models.cnpjs, { as: "cnpj", foreignKey: "cnpjId" });
+    
   };
 
   return buyers;

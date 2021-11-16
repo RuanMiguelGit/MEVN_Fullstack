@@ -1,11 +1,11 @@
 const express = require('express');
 
-const appController = require('../controller/appController');
+const ordersController = require('../controller/orders');
 
-const appRouter = express.Router();
+const orderRouter = express.Router();
 
-appRouter.get('/', appController.test);
+orderRouter.get('/', ordersController.findAllOrders);
 
 module.exports = {
-appRouter
+orderRouter
 };

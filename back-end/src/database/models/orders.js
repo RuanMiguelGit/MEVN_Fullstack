@@ -21,10 +21,10 @@ const orders = (sequelize, DataTypes) => {
   orders.associate = (models) => {
     orders.belongsTo(models.buyers, { as: "buyer", foreignKey: "buyerId"});
     orders.belongsTo(models.cnpjs, { as: "cnpj", foreignKey: "cnpjId"});
-    orders.hasMany(models.offers, { as: "offers", foreignKey: "orderId"});
-    orders.hasMany(models.orderportions, { as: "orderportions", foreignKey: "orderId"});
     orders.belongsTo(models.providers, { as: "provider", foreignKey: "providerId"});
     orders.belongsTo(models.users, { as: "user", foreignKey: "userId"});
+    orders.hasMany(models.offers, { as: "offers", foreignKey: "orderId"});
+    orders.hasMany(models.orderportions, { as: "orderportions", foreignKey: "orderId"});
   }; 
 
   return orders;

@@ -4,14 +4,14 @@ const cors = require('cors');
 const app = express();
 
 const {
-  appRouter,
+  orderRouter,
 
 } = require('./router');
 
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(appRouter);
+app.use(orderRouter);
 
 
 module.exports = app;

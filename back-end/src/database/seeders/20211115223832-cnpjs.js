@@ -12,5 +12,5 @@ module.exports = {
      
     ], {}),
 
-  down: async (queryInterface) => queryInterface.bulkDelete('AnuncioWebmotors', null, {}),
+  down: async (queryInterface) => queryInterface.bulkDelete('cnpjs', null, {}),
 };
