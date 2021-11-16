@@ -1,7 +1,8 @@
 import { getData } from '../service/apiRequest'
 
-export const fetchDataFromApi = async () => {
-   await getData('http://localhost:3002/')
+function  fetchDataFromApi ()  {
+    getData('http://localhost:3002/')
     .then((res) => console.log(res))
 }
 
+export { fetchDataFromApi }
